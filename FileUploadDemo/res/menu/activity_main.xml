@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_photo"
+        android:icon="@drawable/ic_action_photo"
+        android:showAsAction="always"
+        android:title="@string/menu_photo"/>
+    <item
+        android:id="@+id/menu_video"
+        android:icon="@drawable/ic_action_video"
+        android:showAsAction="always"
+        android:title="@string/menu_video"/>
+    <item
+        android:id="@+id/menu_upload_picture"
+        android:icon="@drawable/ic_action_upload_picture"
+        android:showAsAction="always"
+        android:title="@string/menu_upload_picture"/>
+    <item
+        android:id="@+id/menu_upload_video"
+        android:icon="@drawable/ic_action_upload_video"
+        android:showAsAction="always"
+        android:title="@string/menu_upload_video"/>
+
+</menu>

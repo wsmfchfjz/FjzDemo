@@ -9,10 +9,7 @@ import com.example.utildemo.HttpUtil.RequestType;
 public class HttpService {
 	
 	public static final int SERVER_TIMEOUT_DEFAULT = 8000;
-	int serverTimeout = SERVER_TIMEOUT_DEFAULT;
 
-	public static final int SET_AUTH_TO_GET_TOKEN = 100;
-	public static final int SET_TOKEN_TO_GET_CAPTCHA = 101;
 	private HttpUtil httpUtil;
 	
 	private static HttpService httpService;
@@ -56,8 +53,8 @@ public class HttpService {
 			connection.setRequestProperty("X-Gizwits-Application-Id", "dcea1850ec144673904b8adc6c326281");
 			connection.setRequestProperty("X-Gizwits-Application-Token", token);
 			
-			connection.setConnectTimeout(serverTimeout);
-			connection.setReadTimeout(serverTimeout);
+			connection.setConnectTimeout(SERVER_TIMEOUT_DEFAULT);
+			connection.setReadTimeout(SERVER_TIMEOUT_DEFAULT);
 			connection.connect();
 			
 			captchaUrlJson = httpUtil.request(RequestType.GET, urlStr, "", connection);
@@ -80,8 +77,8 @@ public class HttpService {
 			connection.setRequestProperty("X-Gizwits-Application-Id", "dcea1850ec144673904b8adc6c326281");
 			connection.setRequestProperty("X-Gizwits-Application-Auth", "944513b65523f420bdddbe33210fbf6a");
 			
-			connection.setConnectTimeout(serverTimeout);
-			connection.setReadTimeout(serverTimeout);
+			connection.setConnectTimeout(SERVER_TIMEOUT_DEFAULT);
+			connection.setReadTimeout(SERVER_TIMEOUT_DEFAULT);
 			connection.connect();
 			
 			tokenJson = httpUtil.request(RequestType.POST, urlStr, "", connection);

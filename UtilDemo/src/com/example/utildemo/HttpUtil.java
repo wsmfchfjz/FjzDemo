@@ -23,14 +23,6 @@ import org.json.JSONObject;
 
 public class HttpUtil {
 
-	public static final int SERVER_TIMEOUT_DEFAULT = 8000;
-	int serverTimeout = SERVER_TIMEOUT_DEFAULT;
-	private String token;
-	private String captcha_id;
-
-	public static final int SET_AUTH_TO_GET_TOKEN = 100;
-	public static final int SET_TOKEN_TO_GET_CAPTCHA = 101;
-
 	private static HttpUtil httpUtil;
 
 	public static HttpUtil getInstance() {
@@ -38,10 +30,6 @@ public class HttpUtil {
 			httpUtil = new HttpUtil();
 		}
 		return httpUtil;
-	}
-
-	public void setServerTimeout(int serverTimeout) {
-		this.serverTimeout = serverTimeout;
 	}
 
 	private HttpUtil() {
